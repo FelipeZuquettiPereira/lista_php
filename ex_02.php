@@ -11,10 +11,19 @@ function inverterTexto($texto){
     $quantidadeCaracteres = mb_strlen($texto);
 
     return[
-        "invetido" => $textoInvertido,
+        "invertido" => $textoInvertido,
         "quantidade" => $quantidadeCaracteres
     ];
 
 }
 
-$texto_usuario = "Programação em PHP!"
+$texto_usuario = "Programação em PHP! @2024 #ç~ã";
+
+echo "Texto original: $texto_usuario <br>";
+
+$resultado = inverterTexto($texto_usuario);
+
+echo "Texto invertido: " . $resultado["invertido"] . "<br>";
+echo "Quantidade de caracteres: " . $resultado["quantidade"] . "<br>";
+
+?>
