@@ -20,3 +20,5 @@ $y = 5;
 echo "Valor de x: $x <br>";
 echo "Valor de y: $y <br><br>";
 echo "Resultado: ". calcularFormula($x, $y);
+
+?>
