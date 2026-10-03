@@ -7,29 +7,24 @@ Em seguida, crie outra função chamada descriptografarMensagem() capaz de
 recuperar o texto original. -->
 
 <?php 
+function criptografarMensagem($mensagem){ 
+    $alfabetoOriginal = 'abcdefghijklmnopqrstuvwxyz'; 
+    $alfabetoCriptografado = 'fghijklmnopqrstuvwxyzabcde'; 
+    $mensagemCriptografada = strtr($mensagem, $alfabetoOriginal, $alfabetoCriptografado); 
+    echo "A mensagem Criptografada: " . $mensagemCriptografada; 
+    return $mensagemCriptografada;
+} 
 
-function criptografarMensagem($mensagem){
+$resultadoCriptografado = criptografarMensagem('bom dia Icaro'); 
 
-    $alfabetoOriginal = 'abcdefghijklmnopqrstuvwxyz';
-    $alfabetoCriptografado  = 'fghijklmnopqrstuvwxyzabcde';
+echo "<br>";
 
-    $mensagemCriptografada = strtr($mensagem, $alfabetoOriginal, $alfabetoCriptografado);  
+function descriptografarMensagem($mensagemCriptografada){ 
+    $alfabetoOriginal = 'abcdefghijklmnopqrstuvwxyz'; 
+    $alfabetoCriptografado = 'fghijklmnopqrstuvwxyzabcde'; 
+    $mensagemDescriptografada = strtr($mensagemCriptografada, $alfabetoCriptografado, $alfabetoOriginal); 
+    echo "A mensagem Descriptografada: " . $mensagemDescriptografada; 
+} 
 
-    echo " A mensagem Criptografada: " . $mensagemCriptografada;
-}
-
-    criptografarMensagem(ola);
-
-function descriptografarMensagem(){
-
-    $alfabetoOriginal = 'abcdefghijklmnopqrstuvwxyz';
-    $alfabetoCriptografado  = 'fghijklmnopqrstuvwxyzabcde';
-
-    $mensagemDescriptografada = strtr($mensagemCriptografada, $alfabetoCriptografado, $alfabetoOriginal);
-
-    echo "A mensagem Descripto...: " . $mensagemDescriptografada;
-}
-
-
-crip
+descriptografarMensagem($resultadoCriptografado); 
 ?>
