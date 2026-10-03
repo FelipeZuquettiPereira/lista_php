@@ -1,3 +1,10 @@
+<!-- Exercício 06 – Conversor de Temperatura
+Uma empresa que fabrica sensores precisa converter temperaturas entre diferentes
+escalas.
+Crie uma função chamada converterTemperatura() que receba um valor, a escala
+de origem e a escala de destino.
+A função deverá permitir conversões entre Celsius, Fahrenheit e Kelvin. -->
+
 <?php
 
 function converterTemperatura($temperatura, $escala, $escala_destino){
